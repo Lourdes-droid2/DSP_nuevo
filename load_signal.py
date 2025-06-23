@@ -42,13 +42,3 @@ def load_signal_from_wav(filename, target_fs=48000):
     except Exception as e:
         print(f"Error al cargar o procesar el archivo '{filename}': {e}")
         return None, None
-
-
-# Uso del código con el path que diste:
-filepath = "/Users/lukitas/Desktop/TP_DSP/TP_DSP/p336_007.wav"
-signal, fs = load_signal_from_wav(filepath, target_fs=48000)
-
-if signal is not None:
-    print(f"Se cargó la señal con éxito. Duración: {len(signal)/fs:.2f} segundos.")
-else:
-    print("No se pudo cargar la señal.")
